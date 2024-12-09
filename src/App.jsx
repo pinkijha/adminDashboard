@@ -1,3 +1,5 @@
+import Body from "./components/Body"
+import Sidebar from "./components/Sidebar"
 
 
 function App() {
@@ -5,8 +7,9 @@ function App() {
 
   return (
     <>
-      <div>
-        <h1>Admin DashBoard</h1>
+      <div className="flex space-x-2">        
+      <Sidebar/>
+        <Body/>
       </div>
     </>
   )
