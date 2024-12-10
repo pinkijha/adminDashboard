@@ -13,13 +13,13 @@ const Navbar = ({toggleSidebar, isSidebarOpen}) => {
         <button onClick={toggleSidebar}>
           {isSidebarOpen ?
                      '' : 
-                     (<TiThMenu  className="text-2xl cursor-pointer" />)}</button>
+                     (<TiThMenu  className="text-2xl cursor-pointer " />)}</button>
         <h1 className="text-xl font-bold">Overview</h1>
       </div>
 
       {/* Right Side: Search and Profile */}
       <div className="flex items-center space-x-4">
-        <CiSearch className="text-2xl cursor-pointer" />
+        <CiSearch className="text-2xl hover:scale-110 duration-200 cursor-pointer" />
         <img
           className="w-10 h-10 rounded-full cursor-pointer hidden md:block"
           src="https://png.pngtree.com/png-vector/20191125/ourmid/pngtree-beautiful-admin-roles-line-vector-icon-png-image_2035379.jpg"

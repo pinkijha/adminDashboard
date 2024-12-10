@@ -37,14 +37,14 @@ const Sidebar = ({isSidebarOpen, toggleSidebar}) => {
   return (
     <div className={` md:h-screen bg-gray-800 ${isSidebarOpen ? 'block' : 'hidden'} `}>
       <div className='flex'>
-      <h1 className='space-x-2 text-2xl p-4 cursor-pointer'>
+      <h1 className='space-x-1 text-2xl p-4 cursor-pointer'>
         <span className='text-orange-600 font-bold '>Admin</span>
          <span className='text-yellow-600 font-semibold  '>Dashboard</span>
 
          </h1>
          <button onClick={toggleSidebar}>
           {isSidebarOpen ?
-                     (<RxCross1  className="text-2xl text-white cursor-pointer"  />) : 
+                     (<RxCross1  className="text-2xl  text-white cursor-pointer"  />) : 
                      ''}</button>
       </div>
       <hr className='mt-2 border-t border-gray-600 h-[1px]'  />

@@ -8,6 +8,7 @@ import { TiThMenu } from "react-icons/ti";
 import { CiSearch } from "react-icons/ci";
 import { IoIosArrowDown } from "react-icons/io";
 import { RxCross1 } from "react-icons/rx";
+import { FaFacebookF } from "react-icons/fa";
 
 export {
     MdDashboard,
@@ -20,4 +21,5 @@ export {
     CiSearch,
     IoIosArrowDown,
     RxCross1,
+    FaFacebookF,
 }

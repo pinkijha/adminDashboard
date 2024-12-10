@@ -19,7 +19,7 @@ function App() {
 
       <div  className="md:w-5/6">
       <Navbar toggleSidebar={sidebarToggleHandler} isSidebarOpen={sidebarToggle} />
-      <Body/>
+      <Body  isSidebarOpen={sidebarToggle} />
       </div>
 
       </div>
