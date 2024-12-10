@@ -7,6 +7,7 @@ import { IoIosLogOut } from "react-icons/io";
 import { TiThMenu } from "react-icons/ti";
 import { CiSearch } from "react-icons/ci";
 import { IoIosArrowDown } from "react-icons/io";
+import { RxCross1 } from "react-icons/rx";
 
 export {
     MdDashboard,
@@ -18,4 +19,5 @@ export {
     TiThMenu,
     CiSearch,
     IoIosArrowDown,
+    RxCross1,
 }
