@@ -1,4 +1,5 @@
 import Body from "./components/Body"
+import Navbar from "./components/Navbar"
 import Sidebar from "./components/Sidebar"
 
 
@@ -7,9 +8,14 @@ function App() {
 
   return (
     <>
-      <div className="flex space-x-2">        
-      <Sidebar/>
-        <Body/>
+      <div className="flex">        
+      <div className="w-1/6"><Sidebar/></div>
+
+      <div  className="w-5/6">
+      <Navbar/>
+      <Body/>
+      </div>
+
       </div>
     </>
   )
