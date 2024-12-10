@@ -38,8 +38,8 @@ const SocialCards = () => {
       {socialItems.map(({ id, name, icon, hike, number, bgColor, cardBg }) => (
         <div
           key={id}
-          className={`flex flex-col justify-between w-full sm:w-[250px] h-[150px] p-4 rounded-3xl shadow-md
-            transform transition-transform duration-300 hover:rotate-6 hover:scale-105 hover:shadow-lg hover:shadow-gray-500/50 ${cardBg}`}
+          className={`flex md:m-0  flex-col justify-between w-full sm:w-[250px] h-[150px] p-4 rounded-3xl shadow-md
+            transform transition-transform duration-300 hover:rotate-6 hover:scale-90 md:hover:scale-105 hover:shadow-lg hover:shadow-gray-500/50 ${cardBg}`}
         >
           {/* Top Section */}
           <div className="flex justify-between items-center">
