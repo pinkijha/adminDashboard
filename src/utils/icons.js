@@ -9,6 +9,8 @@ import { CiSearch } from "react-icons/ci";
 import { IoIosArrowDown } from "react-icons/io";
 import { RxCross1 } from "react-icons/rx";
 import { FaFacebookF } from "react-icons/fa";
+import { AiFillInstagram } from "react-icons/ai";
+import { FaTwitter } from "react-icons/fa";
 
 export {
     MdDashboard,
@@ -22,4 +24,7 @@ export {
     IoIosArrowDown,
     RxCross1,
     FaFacebookF,
+    AiFillInstagram ,
+    FaTwitter,
+
 }

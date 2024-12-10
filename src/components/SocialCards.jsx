@@ -1,31 +1,64 @@
-import React from 'react'
-import { FaFacebookF } from 'react-icons/fa'
+import React from "react";
+import { AiFillInstagram } from "react-icons/ai";
+import { FaFacebookF, FaTwitter } from "react-icons/fa";
 
 const SocialCards = () => {
-    const socialItems = [
-        {
-            id: 1,
-            name: '',
-            number: '',
-            followers: '',
-            icon: ''
-        }
-    ]
-  return (
-    <div className='flex space-x-1 bg-blue-300 w-[250px] h-[150px] rounded-3xl'>
-      <div className='flex p-6 space-x-9'>
-            <div className='flex flex-col'>
-                <span className='font-semibold text-xl'>Facebook</span><br/>
-                <span className='text-3xl font-bold'>10,345</span>
-                <span className='text-lg font-normal'>Followers</span>
-            </div>
-            <div className='space-y-6'>
-                <span className='text-green-800 font-semibold'>+21.75%</span>
-                <FaFacebookF className='p-3 bg-blue-500 rounded-full text-6xl' />
-            </div>
-      </div>
-    </div>
-  )
-}
+  const socialItems = [
+    {
+      id: 1,
+      name: "Facebook",
+      number: "10,328",
+      hike: "+21.75%",
+      icon: <FaFacebookF />,
+      bgColor: "bg-blue-500",
+      cardBg: "bg-blue-200",
+    },
+    {
+      id: 2,
+      name: "Instagram",
+      number: "45,908",
+      hike: "+21.75%",
+      icon: <AiFillInstagram />,
+      bgColor: "bg-red-500",
+      cardBg: "bg-red-200",
+    },
+    {
+      id: 3,
+      name: "Twitter",
+      number: "14,328",
+      hike: "+21.75%",
+      icon: <FaTwitter />,
+      bgColor: "bg-green-600",
+      cardBg: "bg-green-200",
+    },
+  ];
 
-export default SocialCards
+  return (
+    <div className="flex flex-wrap justify-center gap-4">
+      {socialItems.map(({ id, name, icon, hike, number, bgColor, cardBg }) => (
+        <div
+          key={id}
+          className={`flex flex-col justify-between w-full sm:w-[250px] h-[150px] p-4 rounded-3xl shadow-md
+            transform transition-transform duration-300 hover:rotate-6 hover:scale-105 hover:shadow-lg hover:shadow-gray-500/50 ${cardBg}`}
+        >
+          {/* Top Section */}
+          <div className="flex justify-between items-center">
+            <span className="font-semibold text-xl">{name}</span>
+            <span className="text-green-800 font-semibold">{hike}</span>
+          </div>
+
+          {/* Bottom Section */}
+          <div className="flex justify-between items-center">
+            <div>
+              <span className="text-3xl font-bold block">{number}</span>
+              <span className="text-gray-600 text-sm">Followers</span>
+            </div>
+            <div className={`p-3 rounded-full text-4xl ${bgColor}`}>{icon}</div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default SocialCards;

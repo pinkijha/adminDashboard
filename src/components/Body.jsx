@@ -8,7 +8,7 @@ import CampaignCard from './CampaignCard'
 
 const Body = ({isSidebarOpen}) => {
   return (
-    <div className={` ${isSidebarOpen ? 'flex w-5/6 my-4 mx-6' : ' flex md:mt-20 absolute left-6 w-full'}`}>
+    <div className={` ${isSidebarOpen ? 'flex w-5/6 my-4 mx-6' : ' flex flex-wrap md:mt-20 absolute top-4 left-6 w-full'}`}>
      <div className=' '  >
         <SocialCards/>
         <AnalyticsChart/>
