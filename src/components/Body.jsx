@@ -16,7 +16,7 @@ const Body = ({isSidebarOpen}) => {
         <AnalyticsChart/>
      </div>
 
-     <div className=''>
+     <div className='space-y-5'>
       <ProfileCard/>
       <CampaignCard/>
      </div>
