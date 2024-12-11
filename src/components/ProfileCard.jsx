@@ -2,7 +2,7 @@ import React from 'react'
 
 const ProfileCard = () => {
   return (
-    <div className='  w-[300px] md:w-[400px] md:h-[300px] h-[250px]  justify-center shadow-lg bg-slate-200 rounded-lg'>
+    <div className='  w-[300px] md:w-[300px] md:h-[300px]  h-[250px]  justify-center shadow-lg bg-slate-200 rounded-lg'>
       <div className='flex flex-col items-center'>
       <img
           className="w-20 md:mt-10 mt-4  h-20 rounded-full cursor-pointer  "
