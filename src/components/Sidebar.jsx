@@ -4,34 +4,41 @@ import { IoIosLogOut, IoMdSettings } from 'react-icons/io'
 import { MdDashboard, MdMessage } from 'react-icons/md'
 import { RxCross1 } from 'react-icons/rx'
 import { SiSimpleanalytics } from 'react-icons/si'
+import { NavLink } from 'react-router-dom'
 
 const Sidebar = ({isSidebarOpen, toggleSidebar}) => {
+    
 
     const sidebarItems = [
         {
             id: 1,
             icon: <MdDashboard/>,
             name: 'Dashboard',
+            path: '/'
         },
         {
             id: 2,
             icon: <SiSimpleanalytics/>,
             name: 'Analytics',
+            path: '/analytics'
         },
         {
             id: 3,
             icon: <MdMessage/>,
             name: 'Messages',
+            path: '/message'
         },
         {
             id: 4,
             icon: <FaTools/>,
             name: 'Tools',
+            path: '/tools'
         },
         {
             id: 5,
             icon: <IoMdSettings/>,
             name: 'Settings',
+            path: '/setting'
         },
     ]
   return (
@@ -51,13 +58,17 @@ const Sidebar = ({isSidebarOpen, toggleSidebar}) => {
 
          <div>
                 {
-                    sidebarItems.map(({id, name, icon})=>{
-                       return <div key={id} className='flex mx-6 my-4 p-2 space-x-4 cursor-pointer
-                       hover:scale-110 duration-150 hover:bg-orange-400 hover:rounded-xl '>
+                    sidebarItems.map(({id, name, icon, path})=>{
+                       return <NavLink key={id} to={path}
+                       className={({ isActive }) =>
+                        `flex items-center mx-6 my-4 p-2 space-x-4 cursor-pointer 
+                        hover:scale-110 duration-150 hover:bg-orange-400 hover:rounded-xl 
+                        ${isActive ? "bg-orange-400 rounded-xl" : ""}`
+                      }>
                         <span className='bg-yellow-400 text-2xl p-2 rounded-full'>{icon}</span>
                         <span className='text-white flex items-center md:text-md'> {name}</span>
                        
-                       </div>
+                       </NavLink>
 
                     })
                 }

@@ -1,8 +1,8 @@
 import { useState } from "react";
-import Body from "./components/Body"
-import Navbar from "./components/Navbar"
-import Sidebar from "./components/Sidebar"
-
+import Body from "./components/Body";
+import Navbar from "./components/Navbar";
+import Sidebar from "./components/Sidebar";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   const [sidebarToggle, setSidebarToggle] = useState(false);
@@ -10,21 +10,20 @@ function App() {
   const sidebarToggleHandler = () => {
     setSidebarToggle(!sidebarToggle);
   };
- 
 
   return (
-    <>
-      <div className="flex">        
-      <div className="md:w-1/6"><Sidebar  toggleSidebar={sidebarToggleHandler} isSidebarOpen={sidebarToggle} /></div>
-
-      <div  className="md:w-5/6">
-      <Navbar toggleSidebar={sidebarToggleHandler} isSidebarOpen={sidebarToggle} />
-      <Body  isSidebarOpen={sidebarToggle} />
+    <BrowserRouter>
+      <div className="flex">
+        <div className={`${sidebarToggle ? "block" : "hidden"} md:w-1/6`}>
+          <Sidebar toggleSidebar={sidebarToggleHandler} isSidebarOpen={sidebarToggle} />
+        </div>
+        <div className={`${sidebarToggle ? "md:w-5/6" : "w-full"}`}>
+          <Navbar toggleSidebar={sidebarToggleHandler} isSidebarOpen={sidebarToggle} />
+          <Body isSidebarOpen={sidebarToggle} />
+        </div>
       </div>
-
-      </div>
-    </>
-  )
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
