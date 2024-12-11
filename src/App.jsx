@@ -14,7 +14,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="flex">
-        <div className={`${sidebarToggle ? "block" : "hidden"} md:w-1/6`}>
+        <div className={`${sidebarToggle ? "block w-screen" : "hidden"} md:w-1/6`}>
           <Sidebar toggleSidebar={sidebarToggleHandler} isSidebarOpen={sidebarToggle} />
         </div>
         <div className={`${sidebarToggle ? "md:w-5/6" : "w-full"}`}>

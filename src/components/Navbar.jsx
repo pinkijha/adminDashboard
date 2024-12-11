@@ -1,13 +1,12 @@
 import React from "react";
 import { CiSearch } from "react-icons/ci";
 import { IoIosArrowDown } from "react-icons/io";
-import { RxCross1 } from "react-icons/rx";
 import { TiThMenu } from "react-icons/ti";
 
 const Navbar = ({toggleSidebar, isSidebarOpen}) => {
   return (
     <div className={`flex  justify-between items-center bg-gray-800 text-white p-4 w-full 
-    ${isSidebarOpen ? ' ' : 'md:flex-grow fixed left-0 top-0 z-50 w-full'} `}>
+    ${isSidebarOpen ? ' hidden md:flex' : 'md:flex-grow fixed left-0 top-0 z-50 w-full'} `}>
       {/* Left Side: Title */}
       <div className="flex items-center space-x-1">
         <button onClick={toggleSidebar}>
