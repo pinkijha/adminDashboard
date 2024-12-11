@@ -76,13 +76,15 @@ const Sidebar = ({isSidebarOpen, toggleSidebar}) => {
 
          <div className='xl:fixed bottom-0'>
          <hr className='mt-44 w-64 border-t border-gray-600 h-[1px]'/>
-                    <div className='flex text-white mx-6 my-4 p-2 space-x-2
+                  <NavLink to='/logout'>
+                  <div className='flex text-white mx-6 my-4 p-2 space-x-2
                     hover:scale-95 duration-150 cursor-pointer'>
                         <span className='text-2xl  p-2 '><IoIosLogOut/></span>
                         <span className='text-white flex items-center text-lg'>
                             Logout
                         </span>
                     </div>
+                  </NavLink>
          </div>
     </div>
   )
